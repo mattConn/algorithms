@@ -1,3 +1,10 @@
+# CSC382
+# Matthew Connelly
+# Project 1
+# 2/2/20
+
+# file: fib.py - fibonacci function definitions
+
 # recursive fib
 def fibR(n):
 	if n == 0 or n == 1:
