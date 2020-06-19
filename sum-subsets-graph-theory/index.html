@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sums of All Subsets</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha385-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/tree.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="wrapper">
+        <h1>Sums of Subsets</h1>
+
+        <h3>input = {{.Input}}</h3>
+        <p>Time: {{.TimeElapsed}}</p>
+        <form action="/index.html" method="POST">
+            <div><input type="text" name="body" autofocus></div>
+            <div><input type="submit" value="Compute"></div>
+        </form>
+        <div class="tree">
+            {{range .Data}}
+            <ul>
+                {{range .}}
+                <li>
+                    <div class="node">
+                        <p>{{.}}</p>
+                    </div>
+                </li>
+                {{end}}
+            </ul>
+            {{end}}
+        </div>
+    </div> <!-- end wrapper -->
+
+</body>
+
+</html>

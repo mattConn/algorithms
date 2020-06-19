@@ -1,4 +1,5 @@
 *.out
+*.exe
 __*
 *.pyc
 .ipynb_checkpoints

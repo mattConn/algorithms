@@ -1,0 +1,12 @@
+#wrapper {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.node {
+    border-radius: 100% !important;
+}
+
+.node p {
+    font-size: 25px;
+}
