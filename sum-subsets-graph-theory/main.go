@@ -12,7 +12,7 @@ import (
 )
 
 type tree struct {
-	Input       []int
+	Input, Output       []int
 	SumTimeElapsed, PlotTimeElapsed, TotalTimeElapsed time.Duration
 }
 
@@ -61,7 +61,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	totalTime := sumFinish + plotFinish
 
-	t.Execute(w, tree{Input: nums, SumTimeElapsed: sumFinish, PlotTimeElapsed: plotFinish, TotalTimeElapsed: totalTime})
+	t.Execute(w, tree{Input: nums, Output: output, SumTimeElapsed: sumFinish, PlotTimeElapsed: plotFinish, TotalTimeElapsed: totalTime})
 }
 
 func main() {
