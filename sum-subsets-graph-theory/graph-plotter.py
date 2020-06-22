@@ -42,4 +42,4 @@ for dataIndex in range(len(sys.argv[1:])):
     
 
 draw(g)
-plt.savefig("graph.png")
+plt.savefig("assets/graph.png")

@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha385-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/tree.css">
 </head>
 
 <body>
@@ -25,24 +24,27 @@
         <h1>Sums of Subsets</h1>
 
         <h3>input = {{.Input}}</h3>
-        <p>Time: {{.TimeElapsed}}</p>
+	<h4>Time:</h4>
+	<table>
+		<tr>
+			<td>Sum</td>
+			<td>{{.SumTimeElapsed}}</td>
+		</tr>
+		<tr>
+			<td>Plot</td>
+			<td>{{.PlotTimeElapsed}}</td>
+		</tr>
+		<tr>
+			<td>Total</td>
+			<td>{{.TotalTimeElapsed}}</td>
+		</tr>
+	</table>
         <form action="/index.html" method="POST">
-            <div><input type="text" name="body" autofocus></div>
+            <div><input type="text" placeholder="Space-separated numbers" name="body" autofocus></div>
             <div><input type="submit" value="Compute"></div>
         </form>
-        <div class="tree">
-            {{range .Data}}
-            <ul>
-                {{range .}}
-                <li>
-                    <div class="node">
-                        <p>{{.}}</p>
-                    </div>
-                </li>
-                {{end}}
-            </ul>
-            {{end}}
-        </div>
+
+	<img id="graph" src="assets/graph.png">
     </div> <!-- end wrapper -->
 
 </body>
