@@ -56,7 +56,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	err := exec.Command("./graph-plotter.py", outputString...).Run()
 	plotFinish := time.Since(plotStart)
 	if err != nil {
-		fmt.Fprintln(w,err)
+		fmt.Println(err)
 	}
 
 	totalTime := sumFinish + plotFinish

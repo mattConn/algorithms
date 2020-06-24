@@ -4,7 +4,10 @@
 }
 
 #graph {
+	border: 1px black;
 	margin: 0 auto;
+	cursor: zoom-in;
+	max-width: 100%;
 }
 table, th, td {
   border: 1px solid black;
@@ -16,3 +19,4 @@ table, th, td {
 form {
 	margin: 20px auto;
 }
+
