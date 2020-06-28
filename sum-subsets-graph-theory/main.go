@@ -68,7 +68,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./assets"))))
 	http.HandleFunc("/favicon.ico", func (w http.ResponseWriter, r *http.Request){})
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe(":8081", nil))
